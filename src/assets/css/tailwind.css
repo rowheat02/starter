@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tw-text {
+  @apply tw-font-primary tw-tracking-normal;
+}
+
+@layer base {
+  html {
+    @apply tw-text-grey-800;
+  }
+  h1 {
+    @apply tw-text tw-text-[3.625rem] tw-font-normal tw-leading-[4rem];
+  }
+  h2 {
+    @apply tw-text tw-text-[2.375rem] tw-font-bold tw-leading-[2.75rem];
+  }
+  h3 {
+    @apply tw-text tw-text-[1.625rem] tw-font-bold tw-leading-[2rem];
+  }
+  h4 {
+    @apply tw-text tw-text-[1.25rem] tw-font-bold tw-leading-[1.75rem];
+  }
+  h5 {
+    @apply tw-text tw-text-[1.063rem] tw-font-bold tw-leading-[1.375];
+  }
+  h6 {
+    @apply tw-text tw-text-[1rem] tw-leading-[1.25];
+  }
+  p {
+    @apply tw-text;
+  }
+  span {
+    @apply tw-text-body-md;
+  }
+  a {
+    @apply tw-text-[13px] tw-cursor-pointer tw-select-none;
+  }
+}
+
+@layer components {
+  .tw-input {
+    @apply tw-block tw-w-full tw-px-3 tw-py-[13px] tw-h-[48px] tw-font-normal tw-text-grey-900 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-grey-300 tw-rounded-lg tw-transition tw-ease-in-out tw-m-0 focus:tw-text-grey-700 focus:tw-bg-white focus:tw-border-grey-800 focus:tw-outline-none;
+  }
+  .tw-label {
+    @apply tw-w-full tw-flex tw-font-bold tw-text-grey-800 tw-text-[15px];
+  }
+  .tw-input.tw-input-disabled {
+    @apply tw-text-grey-400 tw-bg-grey-100 tw-cursor-not-allowed tw-select-none;
+  }
+  .tw-label.tw-label-disabled {
+    @apply tw-text-grey-300 tw-cursor-not-allowed tw-select-none;
+  }
+  .tw-btn-text {
+    @apply tw-font-bold tw-text-[13.4px];
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  @layer responsive {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+      transition: scrollbar-color 0.3s;
+
+      &:hover {
+        scrollbar-color: #989898 transparent;
+      }
+
+      &:not(:hover)::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        transition: background 0.3s;
+        background: #989898;
+      }
+    }
+  }
+}
+
+.tw-color-input {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+.tw-color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+}
+.tw-color-input::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.tw-icon-lg {
+  @apply tw-text-[27px];
+}
+
+.tw-icon-md {
+  @apply tw-text-[24px];
+}
+
+tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
